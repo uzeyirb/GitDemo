@@ -1,0 +1,35 @@
+pipeline
+{
+agent any 
+
+stages
+{
+stage ('DockerTest')
+{
+steps
+{
+bat "mvn test"
+}
+
+}
+stage ('DockerDemo')
+{
+steps
+{
+bat "mvn test"
+}
+}
+
+stage ('CucumberSmokeTest')
+{
+steps
+{
+echo 'CucumberSmokeTest'
+
+}
+
+}
+
+}
+
+}
